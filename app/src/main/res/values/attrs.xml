@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="CombineView">
+        <!--属性的名称-->
+        <attr name="text" format="string" />
+        <attr name="checked" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TestView2">
+
+        <attr name="name" format="string" />
+        <attr name="mColor" format="color" />
+
+    </declare-styleable>
+
+
+</resources>
