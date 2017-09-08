@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import org.w3c.dom.Text;
+
 public class TestActivity extends AppCompatActivity {
 
     private Taiji mTaiji;
@@ -19,6 +21,7 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test);
 
         mTaiji = (Taiji) findViewById(R.id.taiji);
+        final TestView testView = (TestView) findViewById(R.id.testview);
 
         Button start = (Button) findViewById(R.id.button);
 
@@ -26,6 +29,8 @@ public class TestActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mHandler.sendEmptyMessageDelayed(0, 20);
+//                testView.start();
+
             }
         });
 
