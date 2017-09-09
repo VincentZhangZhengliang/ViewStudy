@@ -31,7 +31,7 @@ public class SearchView extends View {
     private int mViewHeight;
 
     public SearchView(Context context) {
-        this(context,null);
+        this(context, null);
     }
 
     public SearchView(Context context, AttributeSet attrs) {
@@ -88,7 +88,7 @@ public class SearchView extends View {
 
     // 动效过程监听器
     private ValueAnimator.AnimatorUpdateListener mUpdateListener;
-    private Animator.AnimatorListener mAnimatorListener;
+    private Animator.AnimatorListener            mAnimatorListener;
 
     // 用于控制动画状态转换
     private Handler mAnimatorHandler;
@@ -97,7 +97,6 @@ public class SearchView extends View {
     private boolean isOver = false;
 
     private int count = 0;
-
 
 
     private void initPaint() {
@@ -183,7 +182,7 @@ public class SearchView extends View {
                             mSearchingAnimator.start();
                             Log.e("Update", "RESTART");
                             count++;
-                            if (count>2){       // count大于2则进入结束状态
+                            if (count > 2) {       // count大于2则进入结束状态
                                 isOver = true;
                             }
                         } else {        // 如果搜索已经结束 则进入结束动画
@@ -258,9 +257,4 @@ public class SearchView extends View {
                 break;
         }
     }
-
-
-
-
-
 }

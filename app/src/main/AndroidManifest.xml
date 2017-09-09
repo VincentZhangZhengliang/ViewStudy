@@ -18,11 +18,10 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".TestActivity"></activity>
-        <activity android:name=".CwTestActivity">
-
-        </activity>
-        <activity android:name=".PathTestActivity">
+        <activity android:name=".TestActivity" />
+        <activity android:name=".CwTestActivity" />
+        <activity android:name=".PathTestActivity" />
+        <activity android:name=".SearchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
