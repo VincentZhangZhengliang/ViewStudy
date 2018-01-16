@@ -1,7 +1,7 @@
 package com.topzrt.viewstudy;
 
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -62,6 +62,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.check:
                 mCheckView.check();
+                startActivity(new Intent(getActivity(), Day1Activity.class));
                 break;
 
             case R.id.uncheck:

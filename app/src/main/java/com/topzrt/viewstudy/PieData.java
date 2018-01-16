@@ -6,7 +6,7 @@ package com.topzrt.viewstudy;
  * DSC:
  */
 
-class PieData {
+public class PieData {
 
     // 用户关心数据
     private String name;        // 名字

@@ -10,10 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -22,6 +20,10 @@
         <activity android:name=".CwTestActivity" />
         <activity android:name=".PathTestActivity" />
         <activity android:name=".SearchActivity" />
+        <activity android:name=".Day1Activity" />
+        <activity android:name=".BasicShapeActivity" />
+        <activity android:name=".activities.CanvasActivity" />
+        <activity android:name=".activities.PicTextActivity"></activity>
     </application>
 
 </manifest>
