@@ -5,9 +5,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Picture;
+import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -75,9 +75,12 @@ public class PicTextView extends View {
 //        PictureDrawable drawable = new PictureDrawable(picture);
 //        drawable.setBounds(-150, 0, 100, picture.getHeight());
 //        drawable.draw(canvas);
+//        canvas.drawBitmap(bitmap, new Matrix(), paint);
 
+        Rect src = new Rect(0, 0, bitmap.getWidth() / 2, bitmap.getHeight() / 2);
+        Rect dst = new Rect(0, 0, 200, 200);
+        canvas.drawBitmap(bitmap, src, dst, paint);
 
-        canvas.drawBitmap(bitmap, new Matrix(), paint);
 
     }
 }
