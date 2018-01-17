@@ -23,7 +23,8 @@
         <activity android:name=".Day1Activity" />
         <activity android:name=".BasicShapeActivity" />
         <activity android:name=".activities.CanvasActivity" />
-        <activity android:name=".activities.PicTextActivity"></activity>
+        <activity android:name=".activities.PicTextActivity" />
+        <activity android:name=".activities.PathTestActivity"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,5 @@
 package com.topzrt.viewstudy;
 
-import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -85,20 +84,14 @@ public class PathTestView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
         canvas.translate(mWidth / 2, mHeight / 2);
-
         //画蜘蛛网络
         Path path = new Path();
         for (int i = 0; i < count; i++) {
-
             float r = i * mR;
-
             for (int i1 = 0; i1 < count; i1++) {
                 if (i1 == 0) {
-
                     path.moveTo(r, 0);
-
                 } else {
                     float x = (float) (r * Math.cos(angle * i1));
                     float y = (float) (r * Math.sin(angle * i1));
@@ -115,7 +108,6 @@ public class PathTestView extends View {
             float x = (float) (radius * Math.cos(angle * i));
             float y = (float) (radius * Math.sin(angle * i));
             canvas.drawLine(0, 0, x, y, mPaint);
-
         }
 
         //画文字

@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.topzrt.viewstudy.activities.CanvasActivity;
-import com.topzrt.viewstudy.activities.PicTextActivity;
+import com.topzrt.viewstudy.activities.*;
+import com.topzrt.viewstudy.activities.PathTestActivity;
 
 public class Day1Activity extends AppCompatActivity {
 
@@ -38,6 +38,12 @@ public class Day1Activity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.id_path_basic).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Day1Activity.this, PathTestActivity.class));
+            }
+        });
 
     }
 }

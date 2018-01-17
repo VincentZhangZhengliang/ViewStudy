@@ -10,6 +10,7 @@ import android.graphics.Picture;
 import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.topzrt.viewstudy.R;
@@ -76,9 +77,12 @@ public class PicTextView extends View {
 //        drawable.setBounds(-150, 0, 100, picture.getHeight());
 //        drawable.draw(canvas);
 //        canvas.drawBitmap(bitmap, new Matrix(), paint);
-
+        Log.e("Vincent", "width : " + bitmap.getWidth() + ", height : " + bitmap.getHeight());
+        canvas.translate(width / 2, height / 2);
+        //src:指定绘制图片的区域
         Rect src = new Rect(0, 0, bitmap.getWidth() / 2, bitmap.getHeight() / 2);
-        Rect dst = new Rect(0, 0, 200, 200);
+        //dst: 指定图片在屏幕上显示的区域
+        Rect dst = new Rect(0, 0, 315, 315);
         canvas.drawBitmap(bitmap, src, dst, paint);
 
 

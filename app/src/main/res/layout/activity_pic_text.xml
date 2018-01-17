@@ -1,13 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.topzrt.viewstudy.activities.PicTextActivity">
 
+    <!--<Button-->
+    <!--android:id="@+id/id_check"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp" />-->
 
-    <com.topzrt.viewstudy.view.PicTextView
+    <!--<Button-->
+    <!--android:id="@+id/id_uncheck"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp" />-->
+
+    <!--&lt;!&ndash;<com.topzrt.viewstudy.view.PicTextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="match_parent" />&ndash;&gt;-->
+
+
+    <!--<com.topzrt.viewstudy.view.CheckView2-->
+    <!--android:id="@+id/id_cv2"-->
+    <!--android:layout_width="200dp"-->
+    <!--android:layout_height="200dp" />-->
+
+    <!--<com.topzrt.viewstudy.view.MyTestTextView-->
+    <!--android:background="#55caca"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <RadioGroup
+        android:id="@+id/id_rg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    </RadioGroup>
+
+
+    <com.topzrt.viewstudy.view.PathTestView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
