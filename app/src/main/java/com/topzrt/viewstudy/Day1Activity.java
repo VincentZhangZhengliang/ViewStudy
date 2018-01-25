@@ -45,5 +45,11 @@ public class Day1Activity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.id_bezier).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Day1Activity.this, BezierActivity.class));
+            }
+        });
     }
 }

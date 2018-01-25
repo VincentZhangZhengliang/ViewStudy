@@ -24,7 +24,11 @@
         <activity android:name=".BasicShapeActivity" />
         <activity android:name=".activities.CanvasActivity" />
         <activity android:name=".activities.PicTextActivity" />
-        <activity android:name=".activities.PathTestActivity"></activity>
+        <activity android:name=".activities.PathTestActivity" />
+        <activity android:name=".activities.BezierActivity" />
+        <activity android:name=".Day2Activity" />
+        <activity android:name=".Day0Activity" />
+        <activity android:name=".PropertyAnimation1Activity"></activity>
     </application>
 
 </manifest>

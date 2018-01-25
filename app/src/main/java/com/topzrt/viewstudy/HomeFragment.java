@@ -62,7 +62,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.check:
                 mCheckView.check();
-                startActivity(new Intent(getActivity(), Day1Activity.class));
+                startActivity(new Intent(getActivity(), Day0Activity.class));
                 break;
 
             case R.id.uncheck:

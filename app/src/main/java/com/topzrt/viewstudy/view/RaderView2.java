@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -27,6 +26,9 @@ public class RaderView2 extends View {
     private int count = 6;
     private float angle = (float) (Math.PI * 2 / count);   //60°
     private String[] titles = {"a", "b", "c", "d", "e", "f"};
+    private double[] data = {100,60,60,60,100,50,10,20}; //各维度分值
+    private float maxValue = 100;             //数据最大值
+
 
     public RaderView2(Context context) {
         this(context, null);
@@ -86,17 +88,33 @@ public class RaderView2 extends View {
         mPaint.setTextSize(40);
 
         for (int i = 0; i < count; i++) {
-            Rect rect = new Rect();
-            mPaint.getTextBounds(titles[i], 0, titles[i].length(), rect);
-            int width = rect.width();
-            int height = rect.height();
-
             Paint.FontMetrics fontMetrics = mPaint.getFontMetrics();
             float textH = fontMetrics.descent - fontMetrics.ascent;
 
             float x = (float) (Math.cos(angle * i) * mLength * 1.1);
             float y = (float) (Math.sin(angle * i) * mLength * 1.1);
             canvas.drawText(titles[i], x, y, mPaint);
+
+//            if (curAngle >= 0 && curAngle <= Math.PI / 2) {
+//            } else if (curAngle >= (Math.PI / 2) && curAngle <= (Math.PI)) {
+//                float dis = (float) (textH / Math.sin(Math.PI - curAngle));
+//                Log.e("Vincent", "onDraw: dis " + dis);
+//                float x = (float) (Math.cos(angle * i) * (mLength + dis) * 1.1);
+//                float y = (float) (Math.sin(angle * i) * (mLength + dis) * 1.1);
+//                canvas.drawText(titles[i], x, y, mPaint);
+//            } else if (curAngle > Math.PI && curAngle <= Math.PI * 2) {
+//                float x = (float) (Math.cos(angle * i) * mLength * 1.1);
+//                float y = (float) (Math.sin(angle * i) * mLength * 1.1);
+//                canvas.drawText(titles[i], x, y, mPaint);
+//            }
+
         }
+
+        Path path1 = new Path();
+        mPaint.setAlpha(255);
+        for (int i = 0; i < count; i++) {
+            double percent = data[i] / maxValue;
+        }
+
     }
 }
